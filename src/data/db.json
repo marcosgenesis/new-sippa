@@ -1,0 +1,38 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Desenvolvimento de Software para WEB",
+      "vetor": "web"
+    },
+    { "id": 2, "title": "Processos de Software", "vetor": "processos" },
+    { "id": 3, "title": "Interação Humano Computador", "vetor": "IHC" },
+    { "id": 4, "title": "Requisitos de Software", "vetor": "requisitos" }
+  ],
+  "notices": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "message": "Notas da ultima atividade cadastradas! Confiram se está de acordo",
+      "status": "warning"
+    },
+    {
+      "id": 2,
+      "courseId": 3,
+      "message": "Notas da ultima atividade cadastradas! Confiram se está de acordo",
+      "status": "warning"
+    },
+    {
+      "id": 3,
+      "courseId": 4,
+      "message": "Notas da ultima atividade cadastradas! Confiram se está de acordo",
+      "status": "error"
+    },
+    {
+      "id": 4,
+      "courseId": 2,
+      "message": "Notas da ultima atividade cadastradas! Confiram se está de acordo",
+      "status": "info"
+    }
+  ]
+}
