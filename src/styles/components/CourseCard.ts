@@ -8,22 +8,24 @@ export const Container = styled.div`
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 1) 100%
   );
-  width: 270px;
-  height: 300px;
+  width: 19rem;
+  height: 20rem;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   border-radius: 20px;
-  margin: 20px;
+  margin: 40px;
+  padding: 10px;
   img {
     position: absolute;
-    top: -30px;
-    width: 240px;
+    top: -40px;
+    width: 17rem;
   }
   h2 {
-    height: 80px;
+    text-align: center;
+    height: 60px;
   }
   button {
     background: #f3f5f7;

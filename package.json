@@ -19,6 +19,7 @@
     "json-server": "^0.16.2",
     "next": "9.5.5",
     "next-images": "^1.6.0",
+    "polished": "^4.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^3.11.0",

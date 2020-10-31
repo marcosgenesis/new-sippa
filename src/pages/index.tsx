@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { MdFilterList } from 'react-icons/md';
 import CourseCard from '../components/CourseCard';
 import Header from '../components/Header';
 
-import { Container, Content, Courses, Notices } from '../styles/pages/Home';
+import {
+  Container,
+  Content,
+  Courses,
+  Notices,
+  NoticeHeader,
+} from '../styles/pages/Home';
 import Notice from '../components/Notice';
 import processos from '../assets/svg/processos.svg';
 import api from '../services/api';
@@ -32,13 +39,17 @@ const Home: React.FC = () => {
     loadCourses();
   }, []);
   const container = {
-    hidden: { opacity: 1, scale: 0 },
+    hidden: {
+      opacity: 1,
+      scale: 0,
+    },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
         delay: 0.3,
-        staggerChildren: 0.5,
+        when: 'beforeChildren',
+        staggerChildren: 0.9,
       },
     },
   };
@@ -63,7 +74,7 @@ const Home: React.FC = () => {
             animate="visible"
           >
             {courses.map(index => (
-              <motion.li key={index} className="item" variants={item}>
+              <motion.li key={index.id} className="item" variants={item}>
                 <CourseCard
                   title={index.title}
                   image={getCourseVetor(index.id)}
@@ -74,7 +85,10 @@ const Home: React.FC = () => {
           </motion.ul>
         </Courses>
         <Notices>
-          <h1>Notícias</h1>
+          <NoticeHeader>
+            <MdFilterList color="#b5b7cc" size={30} />
+            <h1>Notícias</h1>
+          </NoticeHeader>
           <motion.ul
             className="container"
             variants={container}
@@ -82,7 +96,7 @@ const Home: React.FC = () => {
             animate="visible"
           >
             {notices.map(index => (
-              <motion.li key={index} className="item" variants={item}>
+              <motion.li key={index.id} className="item" variants={item}>
                 <Notice
                   course={index.course.title}
                   message={index.message}
