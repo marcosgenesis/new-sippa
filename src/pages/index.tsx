@@ -39,17 +39,17 @@ const Home: React.FC = () => {
     loadCourses();
   }, []);
   const container = {
-    hidden: {
-      opacity: 1,
-      scale: 0,
-    },
     visible: {
       opacity: 1,
-      scale: 1,
       transition: {
-        delay: 0.3,
         when: 'beforeChildren',
-        staggerChildren: 0.9,
+        staggerChildren: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: 'afterChildren',
       },
     },
   };

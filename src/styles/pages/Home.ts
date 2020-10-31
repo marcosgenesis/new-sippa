@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { motion } from 'framer-motion';
 export const Container = styled.div`
   display: flex;
   width: 100%;
@@ -30,7 +31,7 @@ export const Notices = styled.div`
     flex-wrap: wrap;
   }
 `;
-export const NoticeHeader = styled.div`
+export const NoticeHeader = styled(motion.div)`
   display: flex;
   svg {
     margin-right: 10px;

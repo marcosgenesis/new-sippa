@@ -18,7 +18,6 @@ import {
   Calendar,
 } from '../../styles/pages/Course';
 import { NoticeHeader } from '../../styles/pages/Home';
-import { Container as CardContainer } from '../../styles/components/CourseCard';
 
 import archives from '../../assets/svg/archives.svg';
 import avaliations from '../../assets/svg/avaliations.svg';
@@ -28,6 +27,7 @@ import Header from '../../components/Header';
 
 import api from '../../services/api';
 import tableIcons from '../../utils/materialTableIcons';
+import { opacify } from 'polished';
 const courses: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -53,7 +53,7 @@ const courses: React.FC = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delay: 0.3,
+        delay: 1.4,
         when: 'beforeChildren',
         staggerChildren: 0.9,
       },
@@ -84,32 +84,52 @@ const courses: React.FC = () => {
       <Content>
         <LeftMenu>
           <Actions>
-            <CardContainer>
+            <Card
+              animate={{
+                scale: [0.7, 1],
+                x: [-10, 0],
+                opacity: [0, 1],
+              }}
+            >
               <img src={archives} alt="" />
               <Link href="/archives">
                 <motion.button whileHover={{ scale: 0.9 }}>
                   Arquivos
                 </motion.button>
               </Link>
-            </CardContainer>
-            <CardContainer>
+            </Card>
+            <Card
+              animate={{
+                scale: [0.7, 1],
+                x: [-50, 0],
+                opacity: [0, 1],
+                transition: { delay: 0.3 },
+              }}
+            >
               <img src={avaliations} alt="" />
               <Link href="/archives">
                 <motion.button whileHover={{ scale: 0.9 }}>
                   Avaliações
                 </motion.button>
               </Link>
-            </CardContainer>
-            <CardContainer>
+            </Card>
+            <Card
+              animate={{
+                scale: [0.7, 1],
+                x: [-100, 0],
+                opacity: [0, 1],
+                transition: { delay: 0.7 },
+              }}
+            >
               <img src={homeWorks} alt="" />
               <Link href="/archives">
                 <motion.button whileHover={{ scale: 0.9 }}>
                   Enviar trabalhos
                 </motion.button>
               </Link>
-            </CardContainer>
+            </Card>
           </Actions>
-          <Calendar>
+          <Calendar animate={{ y: [50, 0], opacity: [0, 1] }}>
             <MaterialTable
               icons={tableIcons}
               className="opa"
@@ -129,7 +149,13 @@ const courses: React.FC = () => {
           </Calendar>
         </LeftMenu>
         <Notices>
-          <NoticeHeader>
+          <NoticeHeader
+            animate={{
+              scale: [0, 1],
+              opacity: [0, 1],
+              transition: { delay: 0.7 },
+            }}
+          >
             <MdFilterList color="#b5b7cc" size={30} />
             <h1>Notícias</h1>
           </NoticeHeader>
