@@ -1,8 +1,10 @@
 # Redesign SIPPA
 
 💡 A ideia principal deste projeto é recriar com uma interface mais intuitiva e moderna, a aplicação para a gestão de frequência e atividades utilizadas pela UFC- Quixadá.
-
-### ✨ Design
+### Antigo Design
+![image](https://user-images.githubusercontent.com/49327985/97791202-871cc080-1bae-11eb-9cbe-3a16d295fa9a.png)
+![image](https://user-images.githubusercontent.com/49327985/97791213-ac113380-1bae-11eb-84b3-172d694d2bca.png)
+### ✨Novo design
 
 ![image](https://user-images.githubusercontent.com/49327985/97791180-3a38ea00-1bae-11eb-9779-58efab87c9f9.png)
 
