@@ -3,7 +3,13 @@
     {
       "id": 1,
       "title": "Desenvolvimento de Software para WEB",
-      "vetor": "web"
+      "vetor": "web",
+      "notices": [
+        { "noticeId": 1 },
+        { "noticeId": 2 },
+        { "noticeId": 3 },
+        { "noticeId": 4 }
+      ]
     },
     { "id": 2, "title": "Processos de Software", "vetor": "processos" },
     { "id": 3, "title": "Interação Humano Computador", "vetor": "IHC" },

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import { Container } from '../styles/components/CourseCard';
 import { motion } from 'framer-motion';
@@ -12,12 +13,13 @@ const CourseCard: React.FC = ({ title, image, path }: CourseCardProps) => {
     <Container>
       <img src={image} alt="Vetor Disciplina" />
       <h2>{title}</h2>
-      <motion.button
-        animate={{ translateY: [-10, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.7 }}
-      >
-        Ver detalhes
-      </motion.button>
+      <Link href={`/courses/${path}`}>
+        <motion.button
+          whileHover={{ scale: 0.95, transition: { duration: 0.1 } }}
+        >
+          Ver detalhes
+        </motion.button>
+      </Link>
     </Container>
   );
 };

@@ -8,8 +8,8 @@ export const Container = styled.div`
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 1) 100%
   );
-  width: 19rem;
-  height: 20rem;
+  width: 16rem;
+  height: 17rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ export const Container = styled.div`
   img {
     position: absolute;
     top: -40px;
-    width: 17rem;
+    width: 13rem;
   }
   h2 {
     text-align: center;
